@@ -1,0 +1,34 @@
+<div data-role="page"  ng-controller="myorder">
+    <div data-role="header">
+        <div data-role="navbar" class="ui-grid-a">
+            <div class="ui-block-a"><a href="#" ng-click="jump('index.html')">开饭啦</a></div>
+            <div class="ui-block-b"><a href="#" class="ui-btn ui-btn-icon-notext ui-icon-bars ui-btn-right"></a></div>
+        </div>
+    </div>
+    <div class="ui-content">
+        <table class="ui-responsive table-stripe" data-role="table" data-mode="columntoggle">
+            <thead>
+                <th data-priority="3">编号</th>
+                <th data-priority="1">菜品</th>
+                <th data-priority="2">下单时间</th>
+                <th data-priority="1">联系人</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="list in disList">
+                    <td>{{list.did}}</td>
+                    <td><img ng-src="img/{{list.img_sm}}" alt=""/></td>
+                    <td>{{list.order_time | date:'yyyy-MM-dd HH:mm'}}</td>
+                    <td>{{list.user_name}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" class="ui-grid-c">
+            <div class="ui-block-a"></div>
+            <div class="ui-block-b"><a href="#" class="ui-icon-home ui-btn ui-btn-icon-notext"></a></div>
+            <div class="ui-block-c"><a href="#" class="ui-icon-user ui-btn ui-btn-icon-notext"></a></div>
+            <div class="ui-block-d"><a href="#" class="ui-icon-bullets ui-btn ui-btn-icon-notext"></a></div>
+        </div>
+    </div>
+</div>

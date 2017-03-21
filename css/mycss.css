@@ -1,0 +1,15 @@
+.textcenter{
+    text-align: center;
+    margin-top: 50%;
+}
+.fullscreen-content{
+
+}
+.ui-listview .ui-li-has-thumb > .ui-btn > img:first-child{
+    width:98%;
+    margin:2%;
+}
+img{
+    width: 100%;
+    display: block;
+}

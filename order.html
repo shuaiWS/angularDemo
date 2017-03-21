@@ -1,0 +1,43 @@
+<div data-role="page" ng-controller="order">
+    <div data-role="header">
+        <div data-role="navbar" class="ui-grid-a">
+            <div class="ui-block-a"><a href="#" ng-click="jump('index.html')">开饭啦</a></div>
+            <div class="ui-block-b"><a href="#" class="ui-btn ui-btn-icon-notext ui-icon-bars ui-btn-right"></a></div>
+        </div>
+    </div>
+    <div class="ui-content">
+        <form action=""  >
+            <label for="username">联系人：</label>
+            <input type="text" id="username" ng-model="order.user_name"
+                   placeholder="请输入联系人姓名"/>
+            <label>性别：</label>
+
+            <div data-role="controlgroup" data-type="horizontal">
+                <input type="radio" ng-model="order.sex" name="sex" value="1" id="mail"/>
+                <label for="mail">先生</label>
+                <input type="radio" ng-model="order.sex" name="sex" value="2" id="famail"/>
+                <label for="famail">女士</label>
+            </div>
+            <label for="phone">联系电话：</label>
+            <input type="text" id="phone" ng-model="order.phone"/>
+            <label for="addr">送餐地址：</label>
+            <textarea id="addr" ng-model="order.addr" cols="30" rows="5"></textarea>
+            <a href="#pop" data-rel ="popup" data-position-to="origin" data-transition="  pop" class="ui-btn ui-corner-all" ng-click="subs()">提交订单</a>
+               <!-- <div data-role="popup" id="pop" style="background-color:red;">
+                    <p  ng-if="tan" >恭喜您！订餐成功，点击查看 <a href="#" ng-click="myorders()">我的订单</a></p>
+                    <p  ng-if="!tan">手机号码有误，请重新输入</p>
+                </div>-->
+        </form>
+        <div class="" ng-if="!isok">
+            <a href="#" ng-click="myorders()">恭喜您！订餐成功，点击查看<b>我的订单</b></a>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" class="ui-grid-c">
+            <div class="ui-block-a"></div>
+            <div class="ui-block-b"><a href="#" class="ui-icon-home ui-btn ui-btn-icon-notext"></a></div>
+            <div class="ui-block-c"><a href="#" class="ui-icon-user ui-btn ui-btn-icon-notext"></a></div>
+            <div class="ui-block-d"><a href="#" class="ui-icon-bullets ui-btn ui-btn-icon-notext"></a></div>
+        </div>
+    </div>
+</div>

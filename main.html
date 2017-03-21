@@ -1,0 +1,50 @@
+<div id="main" data-role="page" ng-controller="main">
+    <div data-role="header">
+       <div data-role="navbar" class="ui-grid-a">
+           <div class="ui-block-a"><a href="#" ng-click="jump('index.html')">开饭啦</a></div>
+           <div class="ui-block-b"><a href="#" class="ui-btn ui-btn-icon-notext ui-icon-bars ui-btn-right"></a></div>
+       </div>
+    </div>
+    <div class="ui-content">
+        <div class="ui-grid-solo">
+            <div class="ui-block-a">
+                <form action="">
+                    <input type="search" name="search" ng-model="kw" placeholder="请输入搜索关键字"/>
+                </form>
+            </div>
+        </div>
+        <div class="ui-grid-solo">
+            <div class="ui-block-a">
+                <ul data-role="listview" data-inset="true">
+                    <li ng-repeat="tent in dislist">
+                        <a href="#" ng-click="show(tent['did'])" data-transition="slide">
+                            <img ng-src="img/{{tent['img_sm']}}" alt=""/>
+
+                            <h2>{{tent['name']}}</h2>
+
+                            <p>{{tent['material']}}</p>
+
+                            <p class="text-danger">￥{{tent['price']}}</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ui-grid-solo">
+            <button ng-click="loadmore()" href="#" class="ui-btn ui-shadow ui-corner-all" id="btn" ng-hide="more">
+                加载更多
+            </button>
+            <button class="ui-icon-delete ui-btn-icon-left ui-btn" ng-hide="!more" disabled="more">
+                没有更多数据可加载
+            </button>
+        </div>
+    </div>
+    <div data-role="footer">
+        <div data-role="navbar" class="ui-grid-c">
+            <div class="ui-block-a"></div>
+            <div class="ui-block-b"><a href="#" class="ui-icon-home ui-btn ui-btn-icon-notext"></a></div>
+            <div class="ui-block-c"><a href="#" class="ui-icon-user ui-btn ui-btn-icon-notext"></a></div>
+            <div class="ui-block-"><a href="#" class="ui-icon-bullets ui-btn ui-btn-icon-notext"></a></div>
+        </div>
+    </div>
+</div>

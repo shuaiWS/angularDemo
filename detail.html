@@ -1,0 +1,43 @@
+<div data-role="page"  ng-controller="detail">
+    <div data-role="header">
+        <div data-role="navbar" class="ui-grid-a">
+            <div class="ui-block-a"><a href="#" ng-click="jump('index.html')">开饭啦</a></div>
+            <div class="ui-block-b"><a href="#" class="ui-btn ui-btn-icon-notext ui-icon-bars ui-btn-right"></a></div>
+        </div>
+    </div>
+    <div class="ui-content">
+        <div class="ui-grid-solo">
+            <div class="ui-block-a">
+                <div class="ui-body">首页/详情</div>
+            </div>
+        </div>
+        <div class="ui-grid-solo">
+            <div class="ui-block-a">
+                <h3 class="ui-navbar">{{disList[0].name}}</h3>
+                <div class="ui-body">
+                            <img ng-src="img/{{disList[0].img_lg}}" alt="" class="img-responsive"/>
+                            <p>
+                                <span class="h4">主要原料：</span>{{disList[0].detail}}
+                            </p>
+                            <p>￥{{disList[0].price}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a href="#" class="ui-btn ui-corner-all" data-rel="back">我再看看</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#"  class="ui-btn ui-corner-all" ng-click="show(disList[0].did)">我要订餐</a>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" class="ui-grid-c">
+            <div class="ui-block-a"></div>
+            <div class="ui-block-b"><a href="#" class="ui-icon-home ui-btn ui-btn-icon-notext"></a></div>
+            <div class="ui-block-c"><a href="#" class="ui-icon-user ui-btn ui-btn-icon-notext"></a></div>
+            <div class="ui-block-d"><a href="#" class="ui-icon-bullets ui-btn ui-btn-icon-notext"></a></div>
+        </div>
+    </div>
+</div>
